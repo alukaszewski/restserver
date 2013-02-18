@@ -836,7 +836,9 @@ class RESTHandler(BaseHTTPRequestHandler):
     def do_DELETE(self):
         """ Process a DELETE request. """
 
-        # DELETE actions respond with a 204 status
+        # DELETE actions respond with a 204 status.  Obvioulsy, no
+        # further data is sent after the requested deletion is
+        # processed.
 
         logit = self.logInput()
         status = ""
