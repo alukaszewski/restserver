@@ -115,7 +115,8 @@ dev_status = int(opts.dev_status)
 
 # Redefine the error message template provided by
 # BaseHTTPRequestHandler.  The formatting values are a dictionary with
-# the following keys: 
+# the following keys:
+#
 # 1. code: The HTTP error code 
 # 2. message: The message appropriate to the code 
 # 3. explain: An explanation of what the code and message mean
@@ -127,7 +128,7 @@ dev_status = int(opts.dev_status)
 BaseHTTPRequestHandler.error_message_format = '''
 <html>
 <head>
-<meta http-equiv="Refresh" content="5;URL=http://news.ycombinator.com">
+<meta http-equiv="Refresh" content="3;URL=http://news.ycombinator.com">
 </head>
 <body>
 You are being redirected.  Please wait...
@@ -170,10 +171,12 @@ class RESTHandler(BaseHTTPRequestHandler):
     by default.  
     """
 
-    # As the JSON format is so similar a Python dictionary, we can use
-    # MySQLdb's DictCursor to return dictionaries that can then be
+    # As the JSON format is so similar to a Python dictionary, we can
+    # use MySQLdb's DictCursor to return dictionaries that can then be
     # converted into JSON.  For more information, see:
+    #
     # http://mysql-python.sourceforge.net/MySQLdb.html#using-and-extending
+    #
     def makeJSONfromDICT(self, resultsDict):
         """ Convert the dictionary output from the DB to a JSON string. """
         results = resultsDict
@@ -831,8 +834,7 @@ class RESTHandler(BaseHTTPRequestHandler):
 
 
     def do_DELETE(self):
-        """ Process a DELETE request.  See the AccessMyTV 2.0 Server
-        documentation for the functionality of this method. """
+        """ Process a DELETE request. """
 
         # DELETE actions respond with a 204 status
 
