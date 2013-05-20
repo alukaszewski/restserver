@@ -4,23 +4,22 @@
 # restserver.py 
 # Author: Albert Lukaszewski
 #
+# Released under the GPLv2:
 #
-# Permission is granted to use this server for any purpose provided
-# the following conditions are met:
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
 #
-# 1. You notify the author of this server at alukaszewski@gmail.com
-#    and briefly let him know how you are using the server.
-# 2. You do not remove this licence from the code.
-# 3. Changes made to the code do not negate its ability to function as
-#    a HTTP server that handles REST-patterned URIs and that processes
-#    I/O based on JSON.
-# 4. Any changes made to the code of this server become part of the
-#    base code of the server.
-# 5. All proprietary code should be imported into the server so as to
-#    avoid becoming part of the server's base code.
-# 6. You avail the base code of the server freely to anyone who asks
-#    for it under these same conditions and without any further
-#    conditions being stipulated.
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+# 02110-1301 USA.
 '''
 A HTTP server that receives a REST request and replies with a JSON
 encoded reply.
